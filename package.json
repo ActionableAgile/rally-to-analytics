@@ -1,0 +1,19 @@
+{
+  "name": "rally-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "js-yaml": "^3.8.4",
+    "progress": "^2.0.0",
+    "ramda": "^0.24.1",
+    "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^3.5.31",
+    "@types/progress": "^2.0.0",
+    "@types/ramda": "^0.0.11",
+    "@types/yargs": "^6.6.0"
+  }
+}
