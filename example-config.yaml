@@ -1,0 +1,9 @@
+Username: MY_USERNAME
+Password: MY_PASSWORD
+ProjectId: 115314567896
+WorkflowId: 7543444700540
+Workflow:
+  Defined: Defined
+  In-Progress: In-Progress
+  Completed: ['Completed']
+  Accepted: Accepted

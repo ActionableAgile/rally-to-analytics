@@ -1,2 +1,5 @@
 node_modules
-
+.vscode
+config.yaml
+dist
+output.csv
