@@ -42,7 +42,8 @@ Or as another example, to run the exe version of the tool without a legacy confi
 ```rally-to-analytics.exe -i myconfig.yaml -o my.csv``` 
 
 
-##Config File##
+## Config File ##
+
 In order for this utility to run properly, you must create a config file that contains the parameters of your CA Agile Central instance, and the necessary details of your workflow.  The config file is what tells the executuable what CA Agile Central instance to connect to, what data to grab, and how to format the resultant file to be uploaded into the ActionableAgile Analytics tool.
 
 The config file we use conforms to the YAML format standard (http://yaml.org/spec/) and is completely case sensitive.  You can find an example config file here: [https://github.com/ActionableAgile/rally-to-analytics/blob/master/typescript/config.yaml](https://github.com/ActionableAgile/rally-to-analytics/blob/master/typescript/config.yaml).  Feel free to follow along with that example as we run through the details of each section of the file.
