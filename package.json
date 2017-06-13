@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build-bundle": "npm run build && browserify dist/cli.js --node --standalone rawjs > rally-to-analytics.js",
+    "build-executable:windows": "nexe -i dist/cli.js -o jira-to-analytics.exe --flags",
+    "build-executable:mac": "nexe -i dist/cli.js -o jira-to-analytics.mac --flags"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "js-yaml": "^3.8.4",
@@ -14,6 +20,10 @@
     "@types/js-yaml": "^3.5.31",
     "@types/progress": "^2.0.0",
     "@types/ramda": "^0.0.11",
-    "@types/yargs": "^6.6.0"
+    "@types/yargs": "^6.6.0",
+    "browserify": "^14.4.0",
+    "spawn-sync": "^1.0.15",
+    "thread-sleep": "^2.0.0",
+    "try-thread-sleep": "^1.0.2"
   }
 }
