@@ -48,6 +48,7 @@ The config file we use conforms to the YAML format standard (http://yaml.org/spe
 The file itself is broken up into the two sections:  
 
 Connection  
+Criteria
 Workflow    
 
 ### The Connection Section ###
@@ -62,8 +63,23 @@ An example of what this section might look like is:
 Connection:  
 	Username: MyUsername  
 	Password: MyPassword  
-  
 ````
+
+
+### The Criteria Section ###
+The Criteria Section of the config file is simply named "Criteria" (without the quotes) and contains optional CA Agile Central attributes that can use to control your data set. Each line in this section contains the name of the CA Agile Central attribute you want in your data followed by a colon (:) followed by its corresponding value in your CA Agile Central instance.  The fields in this section that we support are:
+
+- 	ProjectId: ID of the project
+- 	WorkflowId: ID of the workflow
+
+An example of what this section might look like would be:
+
+```
+Criteria:  
+	ProjectId: 128734827428
+	WorkflowId: 18328424	    
+```
+
 
 ### The Workflow Section ###
 The Workflow Section of the config file is simply named "Workflow" (without the quotes) and contains all the information needed to configure your workflow data.  Each line of the this section contains the name of the workflow column as you want it to appear in the data file, followed by a colon (:) followed by a comma-separated list of all the CA Agile Central statuses that you want to map to that column.  For example, a row in your Workflow section that looks like:

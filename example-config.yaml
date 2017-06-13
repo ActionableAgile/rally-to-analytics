@@ -1,9 +1,11 @@
-Username: MY_USERNAME
-Password: MY_PASSWORD
-ProjectId: 115314567896
-WorkflowId: 7543444700540
+Connection:
+  Username: MY_USERNAME
+  Password: MY_PASSWORD
+Criteria:
+  ProjectId: 124344740866
+  WorkflowId: 715544700540
 Workflow:
   Defined: Defined
   In-Progress: In-Progress
-  Completed: ['Completed']
+  Completed: Completed
   Accepted: Accepted

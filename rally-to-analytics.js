@@ -83,22 +83,26 @@ var run = function (cliArgs) {
                         throw e;
                     }
                     log('Beginning extraction process');
-                    if (!settings.Username)
+                    if (!settings.Connection)
+                        throw new Error('No Connection Settings detected');
+                    if (!settings.Connection.Username)
                         throw new Error('Rally Username not set!');
-                    if (!settings.Password)
+                    if (!settings.Connection.Password)
                         throw new Error('Rally Password not set!');
-                    if (!settings.ProjectId)
+                    if (!settings.Criteria)
+                        throw new Error('Criteria not set!');
+                    if (!settings.Criteria.ProjectId)
                         throw new Error('Rally ProjectId not set!');
-                    if (!settings.WorkflowId)
+                    if (!settings.Criteria.WorkflowId)
                         throw new Error('Rally WorkflowId not set!');
                     rallyExtractor = new extractor_1.default({
-                        username: settings.Username,
-                        password: settings.Password,
+                        username: settings.Connection.Username,
+                        password: settings.Connection.Password,
                         workflow: settings.Workflow,
                     });
                     return [4 /*yield*/, rallyExtractor.extract({
-                            workflowId: settings.WorkflowId,
-                            projectId: settings.ProjectId,
+                            workflowId: settings.Criteria.WorkflowId,
+                            projectId: settings.Criteria.ProjectId,
                         })];
                 case 1:
                     output = _a.sent();
